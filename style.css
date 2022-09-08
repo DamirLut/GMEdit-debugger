@@ -1,0 +1,115 @@
+.message-log {
+  position: relative;
+  margin: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0.25em;
+}
+
+.message-log[count]::after {
+  position: absolute;
+  right: 32px;
+  padding: 1px;
+  content: attr(count);
+  width: auto;
+  height: 16px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000;
+  border-radius: 999px;
+  text-align: center;
+}
+
+.message-log::before {
+  position: absolute;
+  padding: 1px;
+  right: 5px;
+  content: '!';
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 999px;
+  text-align: center;
+}
+
+.message-log[level='warn']::before {
+  background-color: #fcf320;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  border-radius: 0;
+}
+
+.message-log[level='error']::before {
+  background-color: #ff8080;
+  font-weight: bold;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  border-radius: 0;
+}
+
+.message-log[level='debug']::before {
+  background-color: #008cff;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 75% 80%, 75% 100%, 51% 80%, 0 80%);
+  border-radius: 0;
+}
+
+.message-log > .ace_link {
+  margin-right: 0.5em;
+}
+
+.message-image {
+  margin: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0.25em;
+  display: flex;
+  flex-direction: column;
+}
+
+.message-image canvas {
+  width: fit-content;
+}
+
+.tree-struct-container {
+  margin: 0;
+  padding: 0;
+  color: white;
+  position: relative;
+}
+
+.children {
+  position: relative;
+  width: fit-content;
+  left: 1em;
+  cursor: default;
+}
+
+.children::before {
+  position: absolute;
+  top: 0;
+  left: -0.75em;
+  content: ' ';
+  border-left: 1px gray solid;
+  height: 100%;
+}
+
+.struct-value {
+  color: #fff899;
+}
+
+.struct-value.number,
+.struct-value.bool {
+  color: #ff8080;
+}
+.struct-value.string {
+  color: #fcf320;
+}
+.struct-value.method {
+  color: #ffb871;
+}
+
+.console-container {
+  position: relative;
+}
+
+.console-toolbar {
+  position: fixed;
+  right: 0;
+  z-index: 1;
+}

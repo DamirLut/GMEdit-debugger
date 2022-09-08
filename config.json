@@ -1,0 +1,11 @@
+{
+  "name": "Debugger",
+  "scripts": [
+    "dist/main.js"
+  ],
+  "stylesheets": [
+    "style.css"
+  ],
+  "module": true,
+  "git": ""
+}

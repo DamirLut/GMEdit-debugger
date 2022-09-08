@@ -1,0 +1,20 @@
+{
+  "name": "Debugger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/ace": "^0.0.48",
+    "@types/node": "^18.7.13",
+    "@types/ws": "^8.5.3"
+  },
+  "dependencies": {
+    "ws": "^8.8.1"
+  }
+}
